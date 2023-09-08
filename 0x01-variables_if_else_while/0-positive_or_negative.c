@@ -1,8 +1,8 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /**
- * main - Enter point of the function
+ * main - Expect if a number n is positive, negative or equal to zero
  *
  * Return: 0
  */
@@ -13,10 +13,16 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-		puts("%d is positive", n);
-	else if (n < 0)
-		puts("%d is negative", n);
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
 	else
-		puts("%d is zero", n);
+	{
+		printf("%d is negative\n", n);
+	}
 	return (0);
 }
